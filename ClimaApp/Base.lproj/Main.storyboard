@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o5L-dr-YuG">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="suK-jj-8dd">
+            <objects>
+                <viewController id="o5L-dr-YuG" customClass="StartViewController" customModule="ClimaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XDL-cX-fOV">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mundi" translatesAutoresizingMaskIntoConstraints="NO" id="ufj-oW-jsg">
+                                <rect key="frame" x="34.666666666666657" y="181" width="361" height="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="8mf-Kh-ILn"/>
+                                    <constraint firstAttribute="width" constant="361" id="FB4-4t-k9q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você deseja ver as temperaturas em:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqG-Qx-ZXP">
+                                <rect key="frame" x="74.333333333333343" y="469" width="281.33333333333326" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem-vindo ao ClimaApp!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gum-0v-7pG">
+                                <rect key="frame" x="80.333333333333343" y="108" width="269.66666666666663" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AAY-MW-c8X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="JHX-vO-x5V">
+                                <rect key="frame" x="66.666666666666657" y="609" width="296.66666666666674" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBq-OD-FaI">
+                                        <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Celsius">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="celsius:" destination="o5L-dr-YuG" eventType="touchUpInside" id="KEp-Ee-rWt"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Key-m7-NmQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxP-3g-8Qo">
+                                        <rect key="frame" x="192.33333333333331" y="0.0" width="104.33333333333331" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Fahrenheit">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="fahrenheit:" destination="o5L-dr-YuG" eventType="touchUpInside" id="bIR-U0-8IR"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="y8O-JD-5zv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KN5-6M-6Ce"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ufj-oW-jsg" firstAttribute="top" secondItem="gum-0v-7pG" secondAttribute="bottom" constant="43" id="1Lr-KA-4iM"/>
+                            <constraint firstItem="AqG-Qx-ZXP" firstAttribute="top" secondItem="ufj-oW-jsg" secondAttribute="bottom" constant="40" id="8nP-un-Xnl"/>
+                            <constraint firstItem="gum-0v-7pG" firstAttribute="centerX" secondItem="XDL-cX-fOV" secondAttribute="centerX" id="BEA-dX-XET"/>
+                            <constraint firstItem="JHX-vO-x5V" firstAttribute="top" secondItem="AqG-Qx-ZXP" secondAttribute="bottom" constant="119.67" id="FEb-QS-5eA"/>
+                            <constraint firstItem="ufj-oW-jsg" firstAttribute="centerX" secondItem="XDL-cX-fOV" secondAttribute="centerX" id="Jbg-b9-bq5"/>
+                            <constraint firstItem="gum-0v-7pG" firstAttribute="top" secondItem="KN5-6M-6Ce" secondAttribute="top" constant="49" id="K6E-4n-QKb"/>
+                            <constraint firstItem="JHX-vO-x5V" firstAttribute="centerX" secondItem="XDL-cX-fOV" secondAttribute="centerX" id="yw9-BD-euH"/>
+                            <constraint firstItem="AqG-Qx-ZXP" firstAttribute="centerX" secondItem="XDL-cX-fOV" secondAttribute="centerX" id="zcX-3i-Od0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTt-JS-ARL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-805.3435114503817" y="115.49295774647888"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClimaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo-1612404748636-568ca4155994" translatesAutoresizingMaskIntoConstraints="NO" id="whZ-ha-9XJ">
+                                <rect key="frame" x="0.0" y="-11" width="430" height="933"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura máxima: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kn5-yb-uUC">
+                                <rect key="frame" x="130.66666666666666" y="227" width="168.99999999999997" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura mínima: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIY-n4-rgN">
+                                <rect key="frame" x="132.66666666666666" y="297.33333333333331" width="164.99999999999997" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura Atual: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7P-hL-3YN">
+                                <rect key="frame" x="140.66666666666669" y="158" width="148.66666666666669" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidade: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWa-ZY-4SH">
+                                <rect key="frame" x="183.66666666666666" y="90" width="63" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LWa-ZY-4SH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3sp-m4-1kz"/>
+                            <constraint firstItem="kn5-yb-uUC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Qj-2I-pyu"/>
+                            <constraint firstItem="fIY-n4-rgN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M85-W9-X3i"/>
+                            <constraint firstItem="kn5-yb-uUC" firstAttribute="top" secondItem="C7P-hL-3YN" secondAttribute="bottom" constant="48.670000000000002" id="OKb-Lw-XwY"/>
+                            <constraint firstItem="C7P-hL-3YN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YHd-r7-hfH"/>
+                            <constraint firstItem="fIY-n4-rgN" firstAttribute="top" secondItem="kn5-yb-uUC" secondAttribute="bottom" constant="50" id="cdH-4j-jXt"/>
+                            <constraint firstItem="C7P-hL-3YN" firstAttribute="top" secondItem="LWa-ZY-4SH" secondAttribute="bottom" constant="47.670000000000002" id="vRn-Dm-T2s"/>
+                            <constraint firstItem="LWa-ZY-4SH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="xk1-Ez-pkA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tck-YY-khe"/>
+                    <connections>
+                        <outlet property="namecity" destination="LWa-ZY-4SH" id="lXW-df-Oep"/>
+                        <outlet property="temp" destination="C7P-hL-3YN" id="KdQ-eU-Gf1"/>
+                        <outlet property="tempMax" destination="kn5-yb-uUC" id="KBY-OS-LNk"/>
+                        <outlet property="tempMin" destination="fIY-n4-rgN" id="9gL-Jq-TRJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.16279069767441" y="115.23605150214593"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Key-m7-NmQ"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="mundi" width="1470" height="980"/>
+        <image name="photo-1612404748636-568ca4155994" width="1000" height="1500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
